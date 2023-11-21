@@ -1,0 +1,11 @@
+body {
+    background-image: url(Images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
