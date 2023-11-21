@@ -9,3 +9,82 @@ body {
     justify-content: center;
     align-items: center;
 }
+#logoimage {
+    height: 30px;
+    width: 30px;
+    margin: 20px 3px -3px 20px;
+}
+
+#logoname {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+#logo {
+    display: inline;
+}
+
+.homeclick {
+    display: inline;
+    margin: 20px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Tahoma;
+}
+
+button:hover {
+    background-color: rgb(233, 7, 7, 0.5);
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 5px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: aliceblue;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 1px 5px 1px 5px;
+    color: black;
+}
+
+#welcome {
+    width: 500px;
+    text-align: left;
+    margin: 120px auto auto 50px;
+    -webkit-text-stroke: 0.5px rgb(232, 223, 223, 0.8);
+    font-weight: bold;
+}
+
+p {
+    font-size: larger;
+}
+
+#explore {
+    background-color: aliceblue;
+    padding: 5px 30px 5px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#explore:hover {
+    background-color: rgb(2, 7, 10);
+    padding: 5px 30px 5px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#heroimage {
+    float: right;
+    margin-top: -250px;
+}
