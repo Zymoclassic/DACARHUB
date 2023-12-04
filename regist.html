@@ -28,9 +28,10 @@
 
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow:auto;
+            background-color: #f4f4f4;
             background-image: url(img/background.jpg);
             background-size: cover;
             background-position: center center;
@@ -43,21 +44,48 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: -1;
         }
 
-        .login-container {
-            text-align: center;
+        .container {
             max-width: 400px;
-            max-height: auto;
-            width: 100%;
-            padding: 50px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
             margin: auto;
-            transform: scale(0.8);
-            transform-origin: top center;
+            padding: 20px;
             background-color: rgba(255, 255, 255, 0.7);
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -80,34 +108,25 @@
     <!-- Navbar End -->
     
     <!-- Form Start -->
-    <div style="display: flex; align-items: center; justify-content: center; height: 100vh; margin-top: -50px;">
-        <div class="login-container">
-            <img class="img-fluid mb-4" src="img/avatar.png" alt="">
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="username" style="display: block; margin-bottom: 5px;">Email:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group" style="margin-bottom: 15px;">
-                    <label for="password" style="display: block; margin-bottom: 5px;">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <a href="" style="color: #007bff; text-decoration: underline;">Forgot Password?</a>
-                </div>
-                <div class="form-group">
-                    <p>Don't have an account? <a href="regist.html" style="color: #007bff; text-decoration: underline;">Register here</a>.</p>
-                </div>
-                <div class="form-group">
-                    <button type="submit" style="background-color: #D98500; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Login</button>
-                </div>
-            </form>
-        </div>
+    <div class="container">
+        <h2>Register your account</h2>
+        <form action="/register" method="post">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit" style="background-color: #D98500;">Register</button>
+        </form>
     </div>
     <!-- Form End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background-color: rgba(255, 255, 255, 0.3);">
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
         <p class="mb-2 text-center text-body">&copy; <a href="#">www.dacarhub.com</a>. All Rights Reserved.</p>				
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
