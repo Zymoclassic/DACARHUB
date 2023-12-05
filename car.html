@@ -25,6 +25,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuery library-->
+    <script src="./src/jquery.js"></script>
+    <script src="./src/myscript.js"></script>
 </head>
 
 <body>
@@ -149,25 +153,26 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-1.png" alt="">
-                        <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
+                        <img class="img-fluid mb-4" id="carImage" src="img/car-rent-1.png" alt="car">
+                        <h4 class="text-uppercase mb-4" id="carName">Mercedes Benz R3</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
                                 <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
+                                <span id="carYear">2015</span>
                             </div>
                             <div class="px-2 border-left border-right">
                                 <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
+                                <span id="carType">AUTO</span>
                             </div>
                             <div class="px-2">
                                 <i class="fa fa-road text-primary mr-1"></i>
-                                <span>50K</span>
+                                <span id="carMileage">50K</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking-1.html">NGN 9000/Day</a>
+                        <a class="btn btn-primary px-3" id="bookButton" href="booking-1.html">NGN 9000/Day</a>
                     </div>
                 </div>
+                <!--
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
                         <img class="img-fluid mb-4" src="img/car-rent-2.png" alt="">
@@ -294,6 +299,7 @@
                         <a class="btn btn-primary px-3" href="">NGN 20000/Day</a>
                     </div>
                 </div>
+                -->
             </div>
         </div>
     </div>
