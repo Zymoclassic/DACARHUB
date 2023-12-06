@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
+
+# Prints the current working directory
+print("Current Working Directory:", os.getcwd())
+
+# Configure SQLite URI
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://site.db'
 db = SQLAlchemy(app)
 
