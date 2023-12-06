@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 print("Current Working Directory:", os.getcwd())
 
 # Configure SQLite URI
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
 
@@ -22,6 +22,11 @@ class User(db.Model):
 
     # The DB table name
     __tablename__ = 'dacarhub_user_table'
+
+
+with app.app_context():
+    # Creates the table name in the flask application
+    db.create_all()
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -52,6 +57,4 @@ def login():
 
 
 if __name__ == '__main__':
-    # Creates a table name
-    db.create_all()
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)
