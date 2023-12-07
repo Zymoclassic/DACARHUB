@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -79,14 +78,12 @@ def regist():
         if password != confirm_password:
             flash('Password and Confirm Password must match', 'danger')
         else:
-            # this will hash the password before storing it
-            hashed_password = generate_password_hash(password, method='sha256')
             # this will create the new user objeect in the DB
-            new_user = User(email=email, password=hashed_password)
+            new_user = User(email=email, password=password)
             db.session.add(new_user)
             db.session.commit()
             flash('Registration successful! You can now log in.', 'success')
-            return redirect(url_for('login'))
+            return redirect(url_for('index'))
 
     return render_template('regist.html')
 
