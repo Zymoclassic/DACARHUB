@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
-    <link href="img/Ellipse2DACARHUB.png" rel="icon">
+    <link href="../static/img/Ellipse2DACARHUB.png" rel="icon">
 
         <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,15 +16,11 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
     <body>
@@ -65,7 +61,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{ url_for('index') }}" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -73,11 +69,11 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="car.html" class="nav-item nav-link">Cars</a>
-                        <a href="login.html" class="nav-item nav-link">Login</a>
+                        <a href="{{ url_for('index') }}" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                        <a href="{{ url_for('service') }}" class="nav-item nav-link">Service</a>
+                        <a href="{{ url_for('car') }}" class="nav-item nav-link">Cars</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link">Login</a>
                     </div>
                 </div>
             </nav>
@@ -137,7 +133,7 @@
             <h1 class="display-4 text-uppercase text-center mb-5">Welcome To <span class="text-primary">DACARHUB</span></h1>
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <img class="w-75 mb-4" src="img/homepage.png" alt="">
+                    <img class="w-75 mb-4" src="../static/img/homepage.png" alt="">
                     <p>Your one-stop shop for car rental services. We provide a first-class car rental services to you and your loved ones in a very few and easy steps. Get it done at a fingertip anywhere at anytime.</p>
                 </div>
             </div>
@@ -179,7 +175,7 @@
                     <h1 class="display-1 text-uppercase text-primary mb-4">50% OFF</h1>
                     <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
                     <p class="mb-4">Only for Sunday from 1st Dec to 28th Feb 2024</p>
-                    <a class="btn btn-primary mt-2 py-3 px-5" href="regist.html">Register Now</a>
+                    <a class="btn btn-primary mt-2 py-3 px-5" href="{{ url_for('regist') }}">Register Now</a>
                 </div>
             </div>
         </div>
@@ -191,29 +187,29 @@
         <div class="container py-5">
             <div class="owl-carousel vendor-carousel d-flex overflow-auto">
                 <div class="bg-light p-4 d-flex">
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-1.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-1.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-2.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-2.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-3.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-3.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-4.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-4.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-5.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-5.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-6.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-6.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-7.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-7.png" alt="" class="img-fluid">
                     </a>
-                    <a href="car.html" class="d-block mx-2">
-                    <img src="img/vendor-8.png" alt="" class="img-fluid">
+                    <a href="{{ url_for('car') }}" class="d-block mx-2">
+                    <img src="../static/img/vendor-8.png" alt="" class="img-fluid">
                     </a>
                 </div>
             </div>

@@ -24,13 +24,53 @@ class User(db.Model):
     __tablename__ = 'dacarhub_user_table'
 
 
-with app.app_context():
-    # Creates the table name in the flask application
-    db.create_all()
+@app.route('/', endpoint='index')
+def home():
+    return render_template('index.html')
 
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
+@app.route('/favicon.ico')
+def favicon():
+    return 'Favicon not found!', 404
+
+
+@app.route('/service')
+def service():
+    return render_template('service.html')
+
+
+@app.route('/car')
+def car():
+    return render_template('car.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/booking_1')
+def booking_1():
+    return render_template('booking_1.html')
+
+
+@app.route('/booking_2')
+def booking_2():
+    return render_template('booking_2.html')
+
+
+@app.route('/booking_3')
+def booking_3():
+    return render_template('booking_3.html')
+
+
+@app.route('/booking_6')
+def booking_6():
+    return render_template('booking_6.html')
+
+
+@app.route('/regist', methods=['GET', 'POST'])
+def regist():
     if request.method == 'POST':
         email = request.form['username']
         password = request.form['password']
@@ -53,8 +93,8 @@ def register():
 
 @app.route('/login')
 def login():
-    return 'login.html'
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='0.0.0.0', port=5000)

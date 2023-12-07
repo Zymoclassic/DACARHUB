@@ -7,24 +7,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
-    <link href="img/Ellipse2DACARHUB.png" rel="icon">
+    <link href="../static/img/Ellipse2DACARHUB.png" rel="icon">
 
-        <!-- Google Web Fonts -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,7 +61,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{ url_for('index') }}" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -73,11 +69,11 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="car.html" class="nav-item nav-link">Cars</a>
-                        <a href="login.html" class="nav-item nav-link">Login</a>
+                        <a href="{{ url_for('index') }}" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                        <a href="{{ url_for('service') }}" class="nav-item nav-link">Service</a>
+                        <a href="{{ url_for('car') }}" class="nav-item nav-link">Cars</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link">Login</a>
                     </div>
                 </div>
             </nav>
@@ -135,7 +131,7 @@
     <div class="container-fluid page-header" style="background-color: rgba(0, 0, 0, 0.7)">
         <h1 class="display-3 text-uppercase text-white mb-3">Car Listing</h1>
         <div class="d-inline-flex text-white">
-            <h6 class="text-uppercase m-0"><a class="text-white" href="index.html">Home</a></h6>
+            <h6 class="text-uppercase m-0"><a class="text-white" href="{{ url_for('index') }}">Home</a></h6>
             <h6 class="text-body m-0 px-3">/</h6>
             <h6 class="text-uppercase text-body m-0">Car Listing</h6>
         </div>
@@ -149,7 +145,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-1.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-1.png" alt="">
                         <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -165,12 +161,12 @@
                                 <span>50K</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking-1.html">NGN 9000/Day</a>
+                        <a class="btn btn-primary px-3" href="{{ url_for('booking_1') }}">NGN 9000/Day</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-2.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-2.png" alt="">
                         <h4 class="text-uppercase mb-4">BMW X5</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -186,12 +182,12 @@
                                 <span>25K</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking-2.html">NGN 10000/Day</a>
+                        <a class="btn btn-primary px-3" href="{{ url_for('booking_2') }}">NGN 10000/Day</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-3.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-3.png" alt="">
                         <h4 class="text-uppercase mb-4">AUDI TT 2.0</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -207,12 +203,12 @@
                                 <span>50k</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking-3.html">NGN 5000/Day</a>
+                        <a class="btn btn-primary px-3" href="{{ url_for('booking_3') }}">NGN 5000/Day</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-4.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-4.png" alt="">
                         <h4 class="text-uppercase mb-4">AUDI SUV Q3</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -233,7 +229,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-5.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-5.png" alt="">
                         <h4 class="text-uppercase mb-4">Mercedes Benz C3500</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -254,7 +250,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-6.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-6.png" alt="">
                         <h4 class="text-uppercase mb-4">AUDI R8 GT</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
@@ -270,12 +266,12 @@
                                 <span>25K</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking-6.html">NGN 35000/Day</a>                    
+                        <a class="btn btn-primary px-3" href="{{ url_for('booking_6') }}">NGN 35000/Day</a>                    
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="img/car-rent-7.png" alt="">
+                        <img class="img-fluid mb-4" src="../static/img/car-rent-7.png" alt="">
                         <h4 class="text-uppercase mb-4">Range Rover Sport</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">

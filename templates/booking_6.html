@@ -7,24 +7,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
-    <link href="img/Ellipse2DACARHUB.png" rel="icon">
+    <link href="../static/img/Ellipse2DACARHUB.png" rel="icon">
 
-        <!-- Google Web Fonts -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="..static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="..static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,7 +61,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{ url_for('index') }}" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -73,11 +69,11 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="car.html" class="nav-item nav-link">Cars</a>
-                        <a href="login.html" class="nav-item nav-link">Login</a>
+                        <a href="{{ url_for('index') }}" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                        <a href="{{ url_for('service') }}" class="nav-item nav-link">Service</a>
+                        <a href="{{ url_for('car') }}" class="nav-item nav-link">Cars</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link">Login</a>
                     </div>
                 </div>
             </nav>
@@ -87,7 +83,7 @@
 
      <!-- Page Header Start -->
         <div class="d-flex justify-content-center align-items-center text-white" style="margin-top: 20px;">
-            <h5 class="text-uppercase text-body m-0"><a href="car.html">&larr; Cars</a></h5>
+            <h5 class="text-uppercase text-body m-0"><a href="{{ url_for('car') }}">&larr; Cars</a></h5>
         </div>
     </div>
     <!-- Page Header Start -->   
@@ -98,7 +94,7 @@
             <h1 class="display-4 text-uppercase mb-5">Audi R8 GT</h1>
             <div class="row align-items-center pb-2">
                 <div class="col-lg-6 mb-4">
-                    <img class="img-fluid" src="img/detail-6.jpg" alt="">
+                    <img class="img-fluid" src="../static/img/detail-6.jpg" alt="">
                 </div>
                 <div class="col-lg-6 mb-4">
                     <h4 class="mb-2">NGN 10000/Day</h4>
