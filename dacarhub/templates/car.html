@@ -145,154 +145,30 @@
         <div class="container pt-5 pb-3">
             <h1 class="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
             <div class="row">
+                {% for vehicle in vehicles %}
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-1.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
+                        <img class="img-fluid mb-4" src="{% static vehicle.image %}" alt="">
+                        <h4 class="text-uppercase mb-4">{{vehicle.maker}} {{vehicle.name}}</h4>
                         <div class="d-flex justify-content-center mb-4">
                             <div class="px-2">
                                 <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
+                                <span>{{vehicle.year}}</span>
                             </div>
                             <div class="px-2 border-left border-right">
                                 <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
+                                <span>{{vehicle.type}}</span>
                             </div>
                             <div class="px-2">
                                 <i class="fa fa-road text-primary mr-1"></i>
-                                <span>50K</span>
+                                <span>{{vehicle.mileage}}</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking_1/">NGN 9000/Day</a>
+                        <a class="btn btn-primary px-3" href="booking_1/">NGN {{vehicle.price}}/Day</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-2.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">BMW X5</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>25K</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="booking_2/">NGN 10000/Day</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-3.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">AUDI TT 2.0</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>50k</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="booking_3/">NGN 5000/Day</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-4.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">AUDI SUV Q3</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>25K</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="">NGN 9900/Day</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-5.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">Mercedes Benz C3500</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>25K</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="">NGN 8000/Day</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-6.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">AUDI R8 GT</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>25K</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="booking_6/">NGN 35000/Day</a>                    
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-2">
-                    <div class="rent-item mb-4">
-                        <img class="img-fluid mb-4" src="{% static 'img/car-rent-7.png' %}" alt="">
-                        <h4 class="text-uppercase mb-4">Range Rover Sport</h4>
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="px-2">
-                                <i class="fa fa-car text-primary mr-1"></i>
-                                <span>2015</span>
-                            </div>
-                            <div class="px-2 border-left border-right">
-                                <i class="fa fa-cogs text-primary mr-1"></i>
-                                <span>AUTO</span>
-                            </div>
-                            <div class="px-2">
-                                <i class="fa fa-road text-primary mr-1"></i>
-                                <span>25K</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary px-3" href="">NGN 20000/Day</a>
-                    </div>
-                </div>
-            </div>
+                {% endfor %}
+            </div>  
         </div>
     </div>
     <!-- Rent A Car End -->

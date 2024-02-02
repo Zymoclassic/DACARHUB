@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .models import car
 
 # Create your views here.
 def home(request):
@@ -36,9 +37,10 @@ def service(request):
     return HttpResponse(template.render())
 
 
-def car(request):
-    template = loader.get_template('car.html')
-    return HttpResponse(template.render())
+def carview(request):
+    vehicles = car.objects.all()
+    context = {'vehicles' : vehicles}
+    return render(request, 'car.html', context)
 
 
 def register(request):
