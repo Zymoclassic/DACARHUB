@@ -108,7 +108,13 @@
     <!-- Form Start -->
     <div class="container">
         <h2>Register your account</h2>
-        <form action="register" method="post">
+
+        {% for message in messages %}
+        <h5>{{messages}}</h5>
+        {% endfor %}
+
+        <form action="{% url 'register' %}" method="POST">
+            {% csrf_token %}
             <label for="username">Email:</label>
             <input type="text" id="username" name="username" required>
 
