@@ -1,42 +1,51 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.http import HttpResponse
 from django.template import loader
 from .models import car
+from django.urls import reverse
 
 # Create your views here.
 
 
 # Create your views here.
 def home(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+    return render(request, 'index.html')
 
 
 def index(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+    return render(request, 'index.html')
 
 
 def about(request):
-    template = loader.get_template('about.html')
-    return HttpResponse(template.render())
+    return render(request, 'about.html')
 
 
 def booking(request):
-    template = loader.get_template('booking.html')
-    return HttpResponse(template.render())
+    return render(request, 'booking.html')
 
 
 def login(request):
-    template = loader.get_template('login.html')
-    return HttpResponse(template.render())
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, "Your Credetials doesn't match!!!")
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
 
 
 def service(request):
-    template = loader.get_template('service.html')
-    return HttpResponse(template.render())
+    return render(request, 'service.html')
 
 
 def carview(request):
