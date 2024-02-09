@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q_+!9e#5duxl-)sm^+%^6+b4+#d2(n3og&fmjhk!m@0!6%95b$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,8 +80,11 @@ WSGI_APPLICATION = 'dacarhub.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dacarhub',
+        'USER': 'postgres',
+        'PASSWORD': 'aKM1997$',
+        'HOST': 'localhost'
     }
 }
 
@@ -127,6 +130,10 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
