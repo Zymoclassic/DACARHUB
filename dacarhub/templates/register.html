@@ -93,7 +93,7 @@
     <div class="container-fluid position-relative p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="../index" class="navbar-brand">
+                <a href="index" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -113,10 +113,13 @@
         <h5>{{messages}}</h5>
         {% endfor %}
 
-        <form method="POST" action="{% url 'register' %}" >
+        <form method="POST" action="register" >
             {% csrf_token %}
-            <label for="username">Email:</label>
+            <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
@@ -131,7 +134,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid py-4 px-sm-3 px-md-5" style="background-color: rgb(241, 247, 252, 0.5);">
-        <p class="mb-2 text-center text-body">&copy; <a href="#">www.dacarhub.com</a>. All Rights Reserved.</p>				
+        <p class="mb-2 text-center text-body">&copy; <a href="index">www.dacarhub.com</a>. All Rights Reserved.</p>				
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
     <!-- Footer End -->

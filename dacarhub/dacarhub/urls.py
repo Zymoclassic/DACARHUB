@@ -1,30 +1,16 @@
-"""
-URL configuration for dacarhub project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('project.urls')),
-    path('index/', include('project.urls')),
-    path('about/', include('project.urls')),
-    path('booking/', include('project.urls')),
-    path('car/', include('project.urls')),
-    path('login/', include('project.urls')),
-    path('register/', include('project.urls')),
-    path('service/', include('project.urls')),
+    path('index', include('project.urls')),
+    path('about', include('project.urls')),
+    path('service', include('project.urls')),
+    path('car', include('cars.urls')),
+    path('car/booking', include('cars.urls')),
+    path('accounts', include('accounts.urls')),
+    path('accounts/login', include('accounts.urls')),
+    path('account/register', include('accounts.urls')),
+    path('accounts/logout', include('accounts.urls')),
 ]
