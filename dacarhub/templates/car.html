@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DACARHUB</title>
+    <title>Car</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
@@ -158,7 +158,7 @@
     <div class="container-fluid page-header" style="background-color: rgba(0, 0, 0, 0.7)">
         <h1 class="display-3 text-uppercase text-white mb-3">Car Listing</h1>
         <div class="d-inline-flex text-white">
-            <h6 class="text-uppercase m-0"><a class="text-white" href="index">Home</a></h6>
+            <h6 class="text-uppercase m-0"><a class="text-white" href="{% url 'index' %}">Home</a></h6>
             <h6 class="text-body m-0 px-3">/</h6>
             <h6 class="text-uppercase text-body m-0">Car Listing</h6>
         </div>
@@ -189,7 +189,7 @@
                                 <span>{{vehicle.mileage}}</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking_1/">NGN {{vehicle.price}}/Day</a>
+                        <a class="btn btn-primary px-3" href="/car/booking/{{vehicle.name}}">NGN {{vehicle.price}}/Day</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -200,7 +200,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="index">www.dacarhub.com</a>. All Rights Reserved.</p>
+        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">www.dacarhub.com</a>. All Rights Reserved.</p>
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
     <!-- Footer End -->

@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DACARHUB</title>
+    <title>Car</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
@@ -23,8 +23,21 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-</head>
 
+    <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Additional JavaScript to close the navbar when a link is clicked -->
+    <script>
+        $(document).ready(function(){
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+    </script>
+</head>
 
 <body>
     <!-- Topbar Start -->
@@ -96,8 +109,8 @@
     <!-- Navbar End -->
 
      <!-- Page Header Start -->
-        <div class="d-flex justify-content-center align-items-center text-white" style="margin-top: 20px;">
-            <h5 class="text-uppercase text-body m-0"><a href="car">&larr; Cars</a></h5>
+        <div  style="margin-top: 20px;">
+            <h5 class="text-uppercase text-body m-0"><a href="{% url 'car' %}">&larr; Cars</a></h5>
         </div>
     </div>
     <!-- Page Header Start -->   
@@ -123,7 +136,7 @@
                             <small>(250)</small>
                         </div>
                     </div>
-                    <p>Discover the joy of driving with our premium {{vehicle.maker}} {{car.name}}. Whether you're planning a road trip or need a reliable vehicle for your daily commute, this car offers a perfect blend of comfort, style, and performance.</p>
+                    <p>Discover the joy of driving with our premium {{vehicle.maker}} {{vehicle.name}}. Whether you're planning a road trip or need a reliable vehicle for your daily commute, this car offers a perfect blend of comfort, style, and performance.</p>
                     <div class="d-flex pt-1">
                         <h6>Share on:</h6>
                         <div class="d-inline-flex">

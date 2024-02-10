@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DACARHUB</title>
+    <title>Accounts</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
@@ -128,9 +128,9 @@
                             <h1 class="display-1 text-uppercase text-primary mb-4">50% OFF</h1>
                             <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
                             <p class="mb-4">Only for Sunday from 1st Dec to 28th Feb 2024</p>
-                            <a class="btn btn-primary mt-2 py-3 px-5" href="accounts/register">Register Now</a><br>
+                            <a class="btn btn-primary mt-2 py-3 px-5" href="{% url 'register' %}">Register Now</a><br>
                             <br><br><p class="mb-4" style="color: white;">Have a Dacarhub account?</p>
-                            <a class="btn btn-primary mt-2 py-3 px-5" href="login" style="background-color: green; border: none;">Login here</a>
+                            <a class="btn btn-primary mt-2 py-3 px-5" href="{% url 'login' %}" style="background-color: green; border: none;">Login here</a>
                         </div>
                     </div>
                 </div>
@@ -174,28 +174,28 @@
         <div class="container py-5">
             <div class="owl-carousel vendor-carousel d-flex overflow-auto">
                 <div class="bg-light p-4 d-flex">
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-1.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-2.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-3.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-4.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-5.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-6.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-7.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-8.png' %}" alt="" class="img-fluid">
                     </a>
                 </div>
@@ -206,7 +206,7 @@
     
     <!-- Footer Start -->
     <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="index">www.dacarhub.com</a>. All Rights Reserved.</p>
+        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">www.dacarhub.com</a>. All Rights Reserved.</p>
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
     <!-- Footer End -->

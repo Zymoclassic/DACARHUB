@@ -15,7 +15,7 @@ def register(request):
         confirm_password = request.POST['confirm_password']
         if password == confirm_password:
             if User.objects.filter(username=username).exists():
-                messages.info(request, 'Username already exists, please try another email.')
+                messages.info(request, 'Username already exists, please try another username.')
                 return redirect ('register')
             elif User.objects.filter(email=email).exists():
                 messages.info(request, 'Used email, please try another email.')

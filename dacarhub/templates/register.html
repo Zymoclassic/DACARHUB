@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DACARHUB</title>
+    <title>Register</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
@@ -110,10 +110,10 @@
         <h2>Register your account</h2>
 
         {% for message in messages %}
-        <h5>{{message}}</h5>
+        <p>{{message}}</p>
         {% endfor %}
 
-        <form method="POST" action="register" >
+        <form method="POST" action="{% url 'register' %}" >
             {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -134,7 +134,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid py-4 px-sm-3 px-md-5" style="background-color: rgb(241, 247, 252, 0.5);">
-        <p class="mb-2 text-center text-body">&copy; <a href="index">www.dacarhub.com</a>. All Rights Reserved.</p>				
+        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">www.dacarhub.com</a>. All Rights Reserved.</p>				
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
     <!-- Footer End -->

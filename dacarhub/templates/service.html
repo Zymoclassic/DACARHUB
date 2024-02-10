@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DACARHUB</title>
+    <title>Register</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
      <!-- Favicon -->
@@ -52,19 +52,19 @@
             </div>
             <div class="col-md-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-body px-3" href="">
+                    <a class="text-body px-3" href="https://www.facebook.com">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="text-body px-3" href="">
+                    <a class="text-body px-3" href="https://www.twitter.com">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="text-body px-3" href="">
+                    <a class="text-body px-3" href="https://www.linkedin.com">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a class="text-body px-3" href="">
+                    <a class="text-body px-3" href="https://www.instagram.com">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-body pl-3" href="">
+                    <a class="text-body pl-3" href="https://www.youtube.com">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
@@ -74,39 +74,39 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-<div class="container-fluid position-relative nav-bar p-0">
-    <div class="position-relative px-lg-5" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="{% url 'index' %}" class="navbar-brand">
-                <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'index' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'service' %}">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'car' %}">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</div>    
-<!-- Navbar End --><br>
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="{% url 'index' %}" class="navbar-brand">
+                    <h1 class="text-uppercase text-primary mb-1">DACARHUB</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'service' %}">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'car' %}">Cars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>    
+    <!-- Navbar End --><br>
 
 
 
@@ -217,7 +217,7 @@
                     <h1 class="display-1 text-uppercase text-primary mb-4">50% OFF</h1>
                     <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
                     <p class="mb-4">Only for Sunday from 1st Dec to 28th Feb 2024</p>
-                    <a class="btn btn-primary mt-2 py-3 px-5" href="register">Register Now</a>
+                    <a class="btn btn-primary mt-2 py-3 px-5" href="{% url 'register' %}">Register Now</a>
                 </div>
             </div>
         </div>
@@ -229,28 +229,28 @@
         <div class="container py-5">
             <div class="owl-carousel vendor-carousel d-flex overflow-auto">
                 <div class="bg-light p-4 d-flex">
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-1.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-2.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-3.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-4.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-5.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-6.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-7.png' %}" alt="" class="img-fluid">
                     </a>
-                    <a href="car" class="d-block mx-2">
+                    <a href="{% url 'car' %}" class="d-block mx-2">
                     <img src="{% static 'img/vendor-8.png' %}" alt="" class="img-fluid">
                     </a>
                 </div>
@@ -261,7 +261,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="index">www.dacarhub.com</a>. All Rights Reserved.</p>
+        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">www.dacarhub.com</a>. All Rights Reserved.</p>
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
     </div>
     <!-- Footer End -->

@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.carview, name='car'),
-    #path('booking/<car.name>', views.booking, name='booking'),
+    path('booking/<str:vehiclename>', views.booking, name='booking'),
 ]
 
