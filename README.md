@@ -2,6 +2,7 @@ This project is a web-based application that aspires to provide a comprehensive 
 
 --------------------------------------
 Features
+
 User Features:
 Browse Cars: View a list of available vehicles with details such as model, price, and availability.
 
@@ -17,6 +18,7 @@ Manage Bookings: View all reservations and manage them.
 
 --------------------------------------
 Tech Stack
+
 Frontend:
 HTML: Structure of the web application.
 
@@ -35,6 +37,7 @@ Installation
 1. Clone the repository:
 
 git clone https://github.com/zymoclassic/dacarhub.git
+
 cd dacarhub
 
 
@@ -74,6 +77,7 @@ Admins can access a separate dashboard for car and booking management (127.0.0.1
 
 --------------------------------------
 Future Improvements
+
 Payment Gateway: Integrate online payment for bookings.
 
 Advanced Filters: Allow users to search for cars by type, brand, or price range.
@@ -82,10 +86,12 @@ Notifications: Email notifications for booking confirmations and reminders.
 
 --------------------------------------
 License
+
 This project is licensed under the MIT License.
 
 --------------------------------------
 Contact
+
 For questions or feedback, feel free to reach out:
 Awopeju Kolawole Moses
 https://www.kolawolemawopeju.online
