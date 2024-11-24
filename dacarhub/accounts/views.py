@@ -42,7 +42,7 @@ def login(request):
             auth.login(request, user)
             return redirect('/')
         else:
-            messages.info(request, "Your Credetials doesn't match!!!")
+            messages.info(request, "Your credentials doesn't match!!!")
             return redirect('login')
     else:
         return render(request, 'login.html')
