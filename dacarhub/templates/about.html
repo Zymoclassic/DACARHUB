@@ -100,7 +100,12 @@
                         <a class="nav-link" href="{% url 'service' %}">Service</a>
                     </li>
                     <li class="nav-item">
+                        {% comment %} redirect users to log in or register before viewing cars {% endcomment %}
+                        {% if user.is_authenticated %}
                         <a class="nav-link" href="{% url 'car' %}">Cars</a>
+                        {% else %}
+                        <a class="nav-link" href="{% url 'login' %}">Cars</a>
+                        {% endif %}
                     </li>
                     <li class="nav-item">
                         {% if user.is_authenticated %}
@@ -133,7 +138,7 @@
                     <p>At DACARHUB, our vision is to redefine the car rental experience by combining convenience, affordability, and exceptional service. We strive to be your go-to choice for reliable and enjoyable transportation, fostering long-lasting relationships with our valued customers.</p>
 
                     <h2>Contact Us</h2>
-                    <p>Ready to hit the road with DACARHUB? Explore our fleet, book your vehicle, and experience the freedom of hassle-free travel. If you have any questions or need assistance, send an email to dacarhub@gmail.com or contact us on our mobile at +234 903 886 6789. Our friendly team is here to help.</p>
+                    <p>Ready to hit the road with DACARHUB? Explore our fleet, book your vehicle, and experience the freedom of hassle-free travel. If you have any questions or need assistance, send an email to dacarhub@gmail.com or contact us on our mobile at +234 813 514 7630. Our friendly team is here to help.</p>
                     <p>Thank you for choosing DACARHUB. We look forward to being a part of your next adventure!</p>
                 </div>
             </div>
@@ -143,8 +148,8 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">www.dacarhub.com</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a> and <a href="https://github.com/Zymoclassic" target="_blank">Moses</a></p>
+        <p class="mb-2 text-center text-body">&copy; <a href="{% url 'index' %}">Dacarhub</a>. All Rights Reserved.</p>
+        <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Zymoclassic" target="_blank">Awopeju Kolawole Moses</a></p>
     </div>
     <!-- Footer End -->
 </body>
