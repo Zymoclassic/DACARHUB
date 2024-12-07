@@ -87,7 +87,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         {% if user.is_authenticated %}
-                        <p class="login">Hi, {{user.username}}</p>
+                        <p class="login">Hi, {{user.username|upper}}</p>
                         {% endif %}
                         <li class="nav-item active">
                             <a class="nav-link" href="{% url 'index' %}">Home</a>

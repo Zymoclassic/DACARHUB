@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'project',
     'accounts',
     'cars',
-    'django_filters',
 ]
 
 MIDDLEWARE = [

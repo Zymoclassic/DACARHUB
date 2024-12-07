@@ -9,8 +9,8 @@ def accounts(request):
 
 def register(request):
     if request.method == 'POST':
-        email = request.POST['email']
-        username = request.POST['username']
+        email = request.POST['email'].lower() #converts to lowercase
+        username = request.POST['username'].lower() #converts to lowercase
         password = request.POST['password']
         confirm_password = request.POST['confirm_password']
         if password == confirm_password:
@@ -33,7 +33,7 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST['username']
+        username = request.POST['username'].lower() #converts to lowercase
         password = request.POST['password']
 
         user = auth.authenticate(username=username, password=password)
