@@ -84,12 +84,12 @@ Advanced Filters: Allow users to search for cars by type, brand, or price range.
 
 Notifications: Email notifications for booking confirmations and reminders.
 
---------------------------------------
+-----------------------------------
 License
 
 This project is licensed under the MIT License.
 
---------------------------------------
+-----------------------------------
 Contact
 
 For questions or feedback, feel free to reach out:
